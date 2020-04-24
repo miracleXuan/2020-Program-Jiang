@@ -60,3 +60,27 @@ void multiple(int m1[4][4], int m2[4][4]) {
 	}
 	printMartix4x4(result);
 }
+struct Mat4 {
+	int m[4][4];
+};
+void print(Mat4& a)
+{
+	for (int i = 0; i < 4; ++i) {
+		for (int j = 0; j < 4; ++j) {
+			cout << a.m[i][j] << " ";
+		}
+		cout << endl;
+	}
+}
+
+Mat4 add(const Mat4& a, const Mat4& b)
+{
+	int result[4][4];
+	for (int i = 0; i < 4; ++i)
+	{
+		for (int j = 0; j < 4; ++j)
+		{
+			result[i][j] = a.m[i][j] + b.m[i][j];
+		}
+	}
+};
